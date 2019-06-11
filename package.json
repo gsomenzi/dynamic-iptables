@@ -1,0 +1,23 @@
+{
+  "name": "dynamic-iptables",
+  "version": "0.1.0",
+  "description": "Script to generate iptables rules by DNS names provided in CLI.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "test": "node test"
+  },
+  "keywords": [
+    "network",
+    "firewall",
+    "iptables"
+  ],
+  "author": "Guilherme Somenzi <guilherme@somenzi.me>",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^2.20.0"
+  },
+  "bin": {
+    "dynamic-iptables": "./cli.js"
+  }
+}
