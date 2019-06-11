@@ -41,3 +41,35 @@ or for CLI
 > dynamic-iptables -s 192.168.1.1 -p tcp -m --dport 80,443 -j ACCEPT github.com
 # iptables -I FORWARD -s 192.168.1.1 -d 192.30.253.112 -p tcp -m multiport --dport 80,443 -j ACCEPT
  ```
+
+## API
+
+### Generating new chain and rules
+
+ ```javascript
+ const DynIptables = require('dynamic-iptables')
+
+ const remove = DynIptables.removeChain('dyn-iptables')
+ const create = DynIptables.createChain('dyn-iptables')
+
+ const options = {
+   chain: 'dyn-iptables',
+   proto: 'tcp',
+   dport: '80,443',
+   source: '192.168.3.0/24',
+   target: 'ACCEPT',
+   multiport: true
+ }
+
+ DynIptables.resolveDnsName('registry.npmjs.org', (err, res) => {
+   if (err) return console.log(err)
+   DynIptables.createIptablesRule(res, options, (err, rules) => {
+     if (err) return console.log(err)
+     console.log(remove)
+     console.log(create)
+     return rules.map((rule) => {
+       return console.log(rule)
+     })
+   })
+ })
+ ```

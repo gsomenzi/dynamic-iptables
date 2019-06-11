@@ -7,6 +7,10 @@
     "start": "node index",
     "test": "node test"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gsomenzi/dynamic-iptables.git"
+  },
   "keywords": [
     "network",
     "firewall",
