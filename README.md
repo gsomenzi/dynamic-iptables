@@ -73,12 +73,14 @@ or for CLI
    })
  })
 
-# iptables -X dyn-iptables
-# iptables -N dyn-iptables
-# iptables -I dyn-iptables -s 192.168.3.0/24 -d 104.16.21.35 -p tcp -m multiport --dport 80,443 -j ACCEPT
-# iptables -I dyn-iptables -s 192.168.3.0/24 -d 104.16.25.35 -p tcp -m multiport --dport 80,443 -j ACCEPT
-# iptables -I dyn-iptables -s 192.168.3.0/24 -d 104.16.17.35 -p tcp -m multiport --dport 80,443 -j ACCEPT
-# iptables -I dyn-iptables -s 192.168.3.0/24 -d 104.16.23.35 -p tcp -m multiport --dport 80,443 -j ACCEPT
-# iptables -I dyn-iptables -s 192.168.3.0/24 -d 104.16.27.35 -p tcp -m multiport --dport 80,443 -j ACCEPT
-# ...
+/*
+ iptables -X dyn-iptables
+ iptables -N dyn-iptables
+ iptables -I dyn-iptables -s 192.168.3.0/24 -d 104.16.21.35 -p tcp -m multiport --dport 80,443 -j ACCEPT
+ iptables -I dyn-iptables -s 192.168.3.0/24 -d 104.16.25.35 -p tcp -m multiport --dport 80,443 -j ACCEPT
+ iptables -I dyn-iptables -s 192.168.3.0/24 -d 104.16.17.35 -p tcp -m multiport --dport 80,443 -j ACCEPT
+ iptables -I dyn-iptables -s 192.168.3.0/24 -d 104.16.23.35 -p tcp -m multiport --dport 80,443 -j ACCEPT
+ iptables -I dyn-iptables -s 192.168.3.0/24 -d 104.16.27.35 -p tcp -m multiport --dport 80,443 -j ACCEPT
+ ...
+*/
  ```
