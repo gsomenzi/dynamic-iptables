@@ -1,6 +1,6 @@
 {
   "name": "dynamic-iptables",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Script to generate iptables rules by DNS names provided in CLI.",
   "main": "index.js",
   "scripts": {
