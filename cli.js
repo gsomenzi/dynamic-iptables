@@ -36,7 +36,7 @@ DynIptables.resolveDnsName(process.argv[process.argv.length - 1], (err, res) => 
   DynIptables.createIptablesRule(res, options, (err, rules) => {
     if (err) return console.log(err)
     return rules.map((rule) => {
-      return console.log(`rule\n`)
+      return console.log(`${rule}\n`)
     })
   })
 })
